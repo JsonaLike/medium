@@ -2,54 +2,16 @@ import 'package:flutter/material.dart';
 
 main() {
   runApp(MaterialApp(
-    home: Page1(),
+    home: Intro(),
   ));
 }
 
-class Page1 extends StatelessWidget {
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: ElevatedButton(
-          child: Text('Go!'),
-          onPressed: () {
-            Navigator.of(context).push(_createRoute());
-          },
-        ),
-      ),
-    );
-  }
+class Intro extends StatefulWidget {
+
+ _FirstLogoAppState createState() => _FirstLogoAppState();
 }
 
-Route _createRoute() {
-  return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => Page2(),
-    transitionsBuilder: (context, animation, seconddaryAnimation, child) {
-      var begin = Offset(0, 0.87);
-      var end = Offset.zero;
-      var curve = Curves.ease;
-      var tween = Tween(begin: begin, end: end);
-      var curvedAnimation = CurvedAnimation(
-        parent: animation,
-        curve: curve,
-      );
-
-      return SlideTransition(
-        position: tween.animate(curvedAnimation),
-        child: child,
-      );
-    },
-  );
+class _FirstLogoAppState extends State<Intro> {
+  // TODO: implement createState
 }
 
-class Page2 extends StatelessWidget {
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: Text('Page 2'),
-      ),
-    );
-  }
-}
