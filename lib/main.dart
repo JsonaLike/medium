@@ -25,13 +25,18 @@ class Page1 extends StatelessWidget {
 Route _createRoute() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => Page2(),
-    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+    transitionsBuilder: (context, animation, seconddaryAnimation, child) {
       var begin = Offset(0.0, 1.0);
       var end = Offset.zero;
+      var curve = Curves.ease;
       var tween = Tween(begin: begin, end: end);
-      var offsetAnimation = animation.drive(tween);
+      var curvedAnimation = CurvedAnimation(
+        parent: animation,
+        curve: curve,
+      );
+
       return SlideTransition(
-        position: offsetAnimation,
+        position: tween.animate(curvedAnimation),
         child: child,
       );
     },
