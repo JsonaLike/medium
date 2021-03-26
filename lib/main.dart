@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-Route _createRoute() {fdsa
+Route _createRoute() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => Page2(),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
