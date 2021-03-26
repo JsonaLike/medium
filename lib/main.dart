@@ -26,7 +26,7 @@ Route _createRoute() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => Page2(),
     transitionsBuilder: (context, animation, seconddaryAnimation, child) {
-      var begin = Offset(0.0, 1.0);
+      var begin = Offset(0, 0.87);
       var end = Offset.zero;
       var curve = Curves.ease;
       var tween = Tween(begin: begin, end: end);
