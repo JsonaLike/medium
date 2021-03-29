@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage>
       ),
     ),
     TweenSequenceItem(
-      weight: 1.0,
+      weight: 1.2,
       tween: ColorTween(
         begin: Colors.black,
         end: Colors.white,
@@ -58,16 +58,16 @@ class _MyHomePageState extends State<MyHomePage>
   Widget build(BuildContext context) {
     return AnimatedBuilder(
         animation: _controller,
-        builder: (context, child) {
-          return Scaffold(
-            body: Container(
-              color: background
-                  .evaluate(AlwaysStoppedAnimation(_controller.value)),
-              child:Center(child:Image(image: AssetImage('graphics/mediumicon.png')));
-          }
-            ),
+        builder: (context, child)
+    {
+      return Scaffold(
+        body: Container(
+            color: background
+                .evaluate(AlwaysStoppedAnimation(_controller.value)),
+            child: Center(child: Image(image: AssetImage('graphics/logo.png')))
+        ),
 
-          );
-        });
+      );
+    });
   }
 }
