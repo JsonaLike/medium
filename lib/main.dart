@@ -34,22 +34,15 @@ class _MyHomePageState extends State<MyHomePage>
     _controller = AnimationController(
       duration: const Duration(milliseconds: 1400),
       vsync: this,
-    )..reverse();
+    )..forward();
   }
-
+//remove tween and add transition
   Animatable<Color> background = TweenSequence<Color>([
     TweenSequenceItem(
-      weight: 3.0,
+      weight: 1,
       tween: ColorTween(
         begin: Colors.black,
         end: Colors.black,
-      ),
-    ),
-    TweenSequenceItem(
-      weight: 1.2,
-      tween: ColorTween(
-        begin: Colors.black,
-        end: Colors.white,
       ),
     ),
   ]);
