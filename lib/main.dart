@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-fdsfdsffdsfds
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
@@ -64,7 +63,10 @@ class _MyHomePageState extends State<MyHomePage>
             body: Container(
               color: background
                   .evaluate(AlwaysStoppedAnimation(_controller.value)),
+              child:Center(child:Image(image: AssetImage('graphics/mediumicon.png')));
+          }
             ),
+
           );
         });
   }
