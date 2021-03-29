@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(seconds: 10),
+      duration: const Duration(milliseconds: 950),
       vsync: this,
     )..repeat();
   }
@@ -42,22 +42,15 @@ class _MyHomePageState extends State<MyHomePage>
     TweenSequenceItem(
       weight: 1.0,
       tween: ColorTween(
-        begin: Colors.red,
-        end: Colors.green,
+        begin: Colors.black,
+        end: Colors.black,
       ),
     ),
     TweenSequenceItem(
       weight: 1.0,
       tween: ColorTween(
-        begin: Colors.green,
-        end: Colors.blue,
-      ),
-    ),
-    TweenSequenceItem(
-      weight: 1.0,
-      tween: ColorTween(
-        begin: Colors.blue,
-        end: Colors.pink,
+        begin: Colors.black,
+        end: Colors.white,
       ),
     ),
   ]);
