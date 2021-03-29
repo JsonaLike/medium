@@ -32,14 +32,14 @@ class _MyHomePageState extends State<MyHomePage>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(milliseconds: 950),
+      duration: const Duration(milliseconds: 1200),
       vsync: this,
     )..repeat();
   }
 
   Animatable<Color> background = TweenSequence<Color>([
     TweenSequenceItem(
-      weight: 1.0,
+      weight: 3.0,
       tween: ColorTween(
         begin: Colors.black,
         end: Colors.black,
@@ -62,8 +62,7 @@ class _MyHomePageState extends State<MyHomePage>
     {
       return Scaffold(
         body: Container(
-            color: background
-                .evaluate(AlwaysStoppedAnimation(_controller.value)),
+            color: background.evaluate(AlwaysStoppedAnimation(_controller.value)),
             child: Center(child: Image(image: AssetImage('graphics/logo.png')))
         ),
 
