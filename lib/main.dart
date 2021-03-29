@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage>
     _controller = AnimationController(
       duration: const Duration(milliseconds: 1200),
       vsync: this,
-    )
+    );
   }
 
   Animatable<Color> background = TweenSequence<Color>([
