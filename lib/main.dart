@@ -32,9 +32,9 @@ class _MyHomePageState extends State<MyHomePage>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(milliseconds: 1200),
+      duration: const Duration(milliseconds: 1400),
       vsync: this,
-    );
+    )..reverse();
   }
 
   Animatable<Color> background = TweenSequence<Color>([
