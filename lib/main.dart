@@ -63,9 +63,12 @@ class _MyHomePageState extends State<MyHomePage>
       return Scaffold(
         body: Container(
             color: background.evaluate(AlwaysStoppedAnimation(_controller.value)),
-            child: Center(child: FractionallySizedBox(
-            child:Image(image: AssetImage('graphics/logo.png')))
-
+            child: Center(
+                child: FractionallySizedBox(
+                    child:Image(image: AssetImage('graphics/logo.png')),
+                      widthFactor: 0.3,
+                      heightFactor: 0.1,
+            )
       )
         ),
       );
